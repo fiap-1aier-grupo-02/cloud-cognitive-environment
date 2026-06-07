@@ -172,15 +172,129 @@ O diagrama abaixo representa a arquitetura de alto nível da Quantum Commerce, c
 
 
 ### Exercício 2.2 - Comparativo de custos: 3 provedores
-// TODO
-| Item | Azure | AWS | GCP | Notas |
-|------|-------|-----|-----|-------|
-| 2 × VM (2vCPU/8GB) | 140,16 | | | Tipo: Azure: D2s v5; AWS: t3.large; GCP: e2-standard-2 |
-| 500 GB storage | |  | | Tipo: |
-| Banco gerenciado | | | | Tipo: |
-| 10M req serverless | | | | Tipo: |
-| **Total mensal** | | | | |
-| **Total anual** | | | | |
+
+| Item               | Azure            | AWS              | GCP              | Notas                                                                                                                   |
+| ------------------ | ---------------- | ---------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 2 × VM (2vCPU/8GB) | US$ 140,16       | US$ 140,16       | US$ 134,02       | **Tipo:** Azure: D2s v5; AWS: m6i.large; GCP: n4-standard-2                                                             |
+| 500 GB storage     | US$ 11,44        | US$ 11,50        | US$ 9,90         | **Tipo:** Azure: Block Blob Storage; AWS: S3 Standard; GCP: Cloud Storage                                               |
+| Banco gerenciado   | US$ 141,44       | US$ 163,34       | US$ 115,62       | **Tipo:** Azure: Banco de Dados do Azure para PostgreSQL; AWS: Amazon RDS for PostgreSQL; GCP: Cloud SQL for PostgreSQL |
+| 10M req serverless | US$ 21,60        | US$ 1,80         | US$ 18,91        | **Tipo:** Azure: Azure Functions; AWS: AWS Lambda; GCP: Cloud Run                                                       |
+| **Total mensal**   | **US$ 314,64**   | **US$ 316,80**   | **US$ 278,45**   |                                                                                                                         |
+| **Total anual**    | **US$ 3.775,68** | **US$ 3.801,60** | **US$ 3.341,40** |                                                                                                                         |
+
+---
+
+#### a) Qual provedor ficou mais barato? A diferença é significativa?
+
+Com base nos valores estimados, o provedor mais barato foi o **GCP**, com custo mensal de **US$ 278,45** e custo anual de **US$ 3.341,40**.
+
+A comparação dos totais mensais ficou da seguinte forma:
+
+| Provedor | Total mensal |  Total anual |
+| -------- | -----------: | -----------: |
+| GCP      |   US$ 278,45 | US$ 3.341,40 |
+| Azure    |   US$ 314,64 | US$ 3.775,68 |
+| AWS      |   US$ 316,80 | US$ 3.801,60 |
+
+Em relação ao GCP, o Azure ficou **US$ 36,19/mês** mais caro, o que representa **US$ 434,28/ano**. Já a AWS ficou **US$ 38,35/mês** mais cara que o GCP, o que representa **US$ 460,20/ano**.
+
+A diferença pode ser considerada **moderada**. Para um ambiente pequeno, essa variação talvez não seja decisiva sozinha. Porém, em um projeto maior de AI Engineering, com mais VMs, bancos maiores, processamento de dados, GPUs, tráfego de rede e chamadas serverless, essa diferença pode se tornar relevante.
+
+---
+
+#### b) Aplicando Reserved Instances de 1 ano no mais caro, o resultado muda?
+
+Sim, o resultado muda.
+
+Na comparação sob demanda, o provedor mais caro foi a **AWS**, com custo mensal de **US$ 316,80** e custo anual de **US$ 3.801,60**.
+
+Ao aplicar compromisso de uso de **1 ano** nos principais serviços 24/7 da AWS, o custo cai de forma significativa. Os serviços que mais se beneficiam desse modelo são:
+
+* **Amazon EC2**, usado para as VMs;
+* **Amazon RDS for PostgreSQL**, usado para o banco gerenciado.
+
+Com os valores reservados/comprometidos de 1 ano, a estimativa da AWS fica:
+
+| Item AWS                  | Valor sob demanda | Valor com reserva/compromisso de 1 ano |
+| ------------------------- | ----------------: | -------------------------------------: |
+| 2 × EC2 m6i.large         |        US$ 140,16 |                              US$ 92,71 |
+| S3 Standard               |         US$ 11,50 |                              US$ 11,50 |
+| Amazon RDS for PostgreSQL |        US$ 163,34 |                              US$ 73,04 |
+| AWS Lambda                |          US$ 1,80 |                               US$ 1,80 |
+| **Total mensal**          |    **US$ 316,80** |                         **US$ 179,05** |
+
+O novo total mensal da AWS com reserva/compromisso de 1 ano fica:
+
+```text
+US$ 92,71 + US$ 11,50 + US$ 73,04 + US$ 1,80 = US$ 179,05/mês
+```
+
+Considerando apenas o custo mensal recorrente, o total anual seria:
+
+```text
+US$ 179,05 × 12 = US$ 2.148,60/ano
+```
+
+Comparando novamente:
+
+| Provedor                             | Total mensal |
+| ------------------------------------ | -----------: |
+| AWS com reserva/compromisso de 1 ano |   US$ 179,05 |
+| GCP sob demanda                      |   US$ 278,45 |
+| Azure sob demanda                    |   US$ 314,64 |
+| AWS sob demanda                      |   US$ 316,80 |
+
+Portanto, **sim, o resultado muda**. A AWS deixaria de ser o provedor mais caro e passaria a ser o mais barato da comparação.
+
+É importante observar que, no caso do RDS, a estimativa usa opção **Partial Upfront**, ou seja, existe um custo inicial além do custo mensal. Esse custo inicial é de **US$ 476,00**. Portanto, considerando o custo total efetivo do primeiro ano, o cálculo seria:
+
+```text
+Custo mensal recorrente: US$ 179,05 × 12 = US$ 2.148,60
+Custo inicial RDS: US$ 476,00
+
+Total efetivo no primeiro ano:
+US$ 2.148,60 + US$ 476,00 = US$ 2.624,60
+```
+
+Mesmo considerando o valor inicial, a AWS continua mais barata que os demais provedores no cenário analisado:
+
+| Provedor                                                |  Total anual |
+| ------------------------------------------------------- | -----------: |
+| AWS com reserva/compromisso de 1 ano, incluindo upfront | US$ 2.624,60 |
+| GCP sob demanda                                         | US$ 3.341,40 |
+| Azure sob demanda                                       | US$ 3.775,68 |
+| AWS sob demanda                                         | US$ 3.801,60 |
+
+A conclusão é que, para workloads estáveis e previsíveis, como VMs e bancos gerenciados rodando 24/7, modelos de reserva ou compromisso de uso podem alterar completamente a decisão de custo. A análise sob demanda mostra o custo inicial sem compromisso, mas para um ambiente produtivo com uso contínuo, Reserved Instances e Savings Plans podem ser mais vantajosos.
+
+
+#### c) Além de preço, que outros fatores você consideraria para um projeto de IA?
+
+Além do preço, a escolha do provedor para um projeto de IA deve considerar fatores técnicos, operacionais e estratégicos.
+
+**1. Serviços nativos de IA e Machine Learning**
+
+É importante avaliar quais serviços o provedor oferece para LLMs, RAG, embeddings, agentes, visão computacional e machine learning. Exemplos: Azure OpenAI e Azure AI Search, Amazon Bedrock e SageMaker, Vertex AI e Gemini.
+
+**2. Disponibilidade de GPUs**
+
+Projetos de IA podem precisar de GPUs para treinamento, fine-tuning ou inferência. Portanto, é necessário verificar se a região escolhida possui instâncias adequadas e capacidade disponível.
+
+**3. Integração com dados**
+
+IA depende muito de dados. O provedor deve ter boa integração com object storage, bancos relacionais, bancos NoSQL, bancos vetoriais, mensageria, data lake e ferramentas analíticas.
+
+**4. Segurança e governança**
+
+É essencial avaliar IAM/RBAC, criptografia, auditoria, gestão de segredos, isolamento de rede, LGPD e políticas de Responsible AI, principalmente quando há dados sensíveis ou prompts com informações internas.
+
+**5. Observabilidade**
+
+Além de CPU, memória e latência, projetos de IA exigem monitoramento de uso de tokens, custo por requisição, latência de inferência, taxa de erro, qualidade das respostas e falhas em pipelines de embeddings ou RAG.
+
+**6. Latência e região dos serviços**
+
+Mesmo usando uma região próxima, alguns modelos, GPUs ou serviços de IA podem estar disponíveis apenas em outras regiões. Isso pode aumentar latência, custo de rede e complexidade da arquitetura.
 
 
 ### Exercício 2.3 - Estratégia de migração para sua empresa
@@ -235,16 +349,52 @@ Também seriam aplicadas práticas de segurança, como criptografia dos dados, R
 
 Com isso, o banco central recebe apenas dados validados, o processo se torna auditável e o time administrativo reduz o esforço manual de conferência e correção.
 
-
 ---
 
 ## 🔴 Nível 3 — Bônus
 
 ### Exercício 3.1 — Terraform: endurecer a segurança de rede da VM
-// TODO
+- Arquivos:
+  - Código IaC: `terraform/main.tf`
+  - Código IaC: `terraform/outputs.tf`
+  - Código IaC: `terraform/variables.tf`
 
 ### Exercício 3.2 — Bicep equivalente
-// TODO
+- Arquivo `bicep/main.bicep`
+
+#### 4. Compare os três artefatos lado a lado e responda no README do grupo:
+### Pergunta 1 — Quantas linhas tem cada artefato?
+ 
+**Importante:** o `template.json` mencionado no enunciado **não consta** no repositório base do professor (`aie-cloud`). Para obter o equivalente ARM e fazer a comparação de 3 vias, geramos o template a partir do próprio Bicep:
+
+```bash
+bicep build main.bicep
+wc -l main.json
+```
+ 
+| Artefato | Linhas | Observação |
+|----------|-------:|------------|
+| ARM `main.json` (gerado via `bicep build`) | 236 | JSON expandido pelo compilador |
+| Terraform (`main.tf` + `variables.tf` + `outputs.tf`) | 189 | 137 + 33 + 19 |
+| Bicep (`main.bicep`) | 154 | DSL enxuta |
+ 
+O ARM gerado é o **mais verboso** dos três: o compilador expande tudo e adiciona metadados. Isso reforça a leitura de que o JSON ARM é o formato menos enxuto, enquanto Terraform e Bicep ficam bem mais curtos e legíveis.
+ 
+### Pergunta 2 — Qual ficou mais legível?
+ 
+O **Bicep**. Sintaxe declarativa direta, com tipagem e autocomplete, e bem menos cerimônia que o JSON do ARM. O Terraform (HCL) fica muito próximo em legibilidade e ainda ganha em portabilidade entre nuvens.
+ 
+### Pergunta 3 — Quando escolher Bicep sobre Terraform?
+ 
+Quando o projeto é **Azure-only** e o time quer integração nativa:
+ 
+- não precisa gerenciar *state* externo (o estado fica no próprio Resource Group / deployment do Azure);
+- `what-if` nativo para prever mudanças antes de aplicar;
+- suporte de "dia zero" a recursos novos da Azure;
+- ferramentas e suporte Microsoft.
+ 
+Para cenários **multicloud**, ou quando se quer *state* e módulos compartilhados entre Azure, AWS e GCP, o **Terraform** é a melhor escolha.
+
 
 ### Exercício 3.3 Desafio de arquitetura: multi-cloud para a Quantum Commerce
 #### a) Arquitetura multi-cloud e justificativa dos workloads
@@ -375,5 +525,8 @@ Se começássemos o projeto QC, tomaríamos cuidado para separar desde o início
 - Documento principal: `entrega-grupo-02-aula01.md`
 - Diagrama da arquitetura QC: `diagramas/arquitetura-qc-aula01.png`
 - Diagrama bônus multi-cloud: `diagramas/arquitetura-qc-aula01-bonus.png`
-- Código IaC: `terraform/`
+- Código IaC: `terraform/main.tf`
+- Código IaC: `terraform/outputs.tf`
+- Código IaC: `terraform/variables.tf`
+- Código IaC: `bicep/main.bicep`
 - Endpoint ativo (se houver): URL pública sem credenciais — apenas para demonstração durante a janela de correção
