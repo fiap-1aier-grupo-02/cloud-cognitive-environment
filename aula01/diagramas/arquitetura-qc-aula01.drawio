@@ -1,0 +1,176 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="quantum-commerce" name="Arquitetura Quantum Commerce">
+    <mxGraphModel dx="2175" dy="1143" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="users" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=16;arcSize=15;" value="&lt;b&gt;Usuários&lt;/b&gt;&lt;br&gt;Web | Mobile | Chatbot" vertex="1">
+          <mxGeometry height="70" width="490" x="455" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="frontdoor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" value="Azure Front Door + CDN + WAF" vertex="1">
+          <mxGeometry height="50" width="560" x="420" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="note-edge" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14" value="baixa latência + proteção" vertex="1">
+          <mxGeometry height="40" width="250" x="1020" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" value="Frontend / Mobile App" vertex="1">
+          <mxGeometry height="50" width="560" x="420" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1" value="API Gateway / BFF" vertex="1">
+          <mxGeometry height="50" width="560" x="420" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="backend-group" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;startSize=34" value="Serviços de Backend" vertex="1">
+          <mxGeometry height="250" width="455" x="135" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="catalogo" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Catálogo" vertex="1">
+          <mxGeometry height="35" width="170" x="35" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="preco" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Preço" vertex="1">
+          <mxGeometry height="35" width="170" x="250" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="estoque" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Estoque" vertex="1">
+          <mxGeometry height="35" width="170" x="35" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="carrinho" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Carrinho" vertex="1">
+          <mxGeometry height="35" width="170" x="250" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="pedido" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Pedido" vertex="1">
+          <mxGeometry height="35" width="170" x="35" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="pagamento" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Pagamento" vertex="1">
+          <mxGeometry height="35" width="170" x="250" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="recomendacao" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Recomendação" vertex="1">
+          <mxGeometry height="35" width="170" x="35" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="logistica" parent="backend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Logística" vertex="1">
+          <mxGeometry height="35" width="170" x="250" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="note-backend" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=14" value="microserviços / escalabilidade" vertex="1">
+          <mxGeometry height="70" width="100" x="20" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-group" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillColor=#d5e8f7;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;startSize=34" value="Serviço Conversacional IA" vertex="1">
+          <mxGeometry height="250" width="455" x="805" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="chat-orch" parent="ai-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Orquestrador do Chat" vertex="1">
+          <mxGeometry height="40" width="275" x="90" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="openai" parent="ai-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Azure OpenAI Service" vertex="1">
+          <mxGeometry height="40" width="275" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vector" parent="ai-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14" value="Azure AI Search / Vector DB" vertex="1">
+          <mxGeometry height="40" width="275" x="90" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="ai-group" source="chat-orch" style="endArrow=block;html=1;rounded=0;strokeWidth=2" target="openai" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="ai-group" source="openai" style="endArrow=block;html=1;rounded=0;strokeWidth=2" target="vector" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note-rag" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14" value="RAG: busca semântica + contexto do catálogo" vertex="1">
+          <mxGeometry height="90" width="110" x="1280" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="events" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15" value="&lt;b&gt;Mensageria / Eventos&lt;/b&gt;&lt;br&gt;Service Bus / Event Grid" vertex="1">
+          <mxGeometry height="70" width="340" x="530" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="data-group" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;startSize=34" value="Camada de Dados" vertex="1">
+          <mxGeometry height="120" width="1125" x="135" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="sql" parent="data-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Azure SQL Database" vertex="1">
+          <mxGeometry height="40" width="170" x="30" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="cosmos" parent="data-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Cosmos DB" vertex="1">
+          <mxGeometry height="40" width="150" x="240" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="blob" parent="data-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Blob Storage" vertex="1">
+          <mxGeometry height="40" width="150" x="430" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" parent="data-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Redis Cache" vertex="1">
+          <mxGeometry height="40" width="150" x="620" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lake" parent="data-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Data Lake" vertex="1">
+          <mxGeometry height="40" width="150" x="810" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="note-data" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14" value="dados transacionais e catálogo" vertex="1">
+          <mxGeometry height="70" width="110" x="1280" y="955" as="geometry" />
+        </mxCell>
+        <mxCell id="gov-group" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;startSize=34" value="Observabilidade, Segurança e Governança" vertex="1">
+          <mxGeometry height="110" width="1125" x="135" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="monitor" parent="gov-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Azure Monitor" vertex="1">
+          <mxGeometry height="35" width="160" x="35" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="appinsights" parent="gov-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Application Insights" vertex="1">
+          <mxGeometry height="35" width="180" x="240" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="rbac" parent="gov-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="RBAC" vertex="1">
+          <mxGeometry height="35" width="120" x="465" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="keyvault" parent="gov-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="Key Vault" vertex="1">
+          <mxGeometry height="35" width="150" x="630" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="finops" parent="gov-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=13" value="FinOps" vertex="1">
+          <mxGeometry height="35" width="130" x="825" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="note-gov" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14" value="monitoramento, auditoria e custos" vertex="1">
+          <mxGeometry height="60" width="110" x="1280" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="users" style="endArrow=block;html=1;rounded=0;strokeWidth=2" target="frontdoor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="frontdoor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" target="frontend" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="frontend" style="endArrow=block;html=1;rounded=0;strokeWidth=2" target="api" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="api" style="endArrow=block;html=1;rounded=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" target="backend-group" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="363" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="api" style="endArrow=block;html=1;rounded=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" target="ai-group" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1033" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="backend-group" style="endArrow=block;html=1;rounded=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" target="events" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="363" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="ai-group" style="endArrow=block;html=1;rounded=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" target="events" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1033" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="events" style="endArrow=block;html=1;rounded=0;strokeWidth=2" target="data-group" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="backend-group" style="endArrow=block;html=1;rounded=0;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="790" as="sourcePoint" />
+            <mxPoint x="249" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="ai-group" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="820" as="sourcePoint" />
+            <mxPoint x="1146" y="919" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="ai-group" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2" target="backend-group" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
