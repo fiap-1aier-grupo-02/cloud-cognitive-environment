@@ -1,0 +1,263 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="qc-multicloud-33a-fullcats" name="3.3a - Multi-cloud categorias explícitas">
+    <mxGraphModel dx="2175" dy="1143" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="users" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1;" value="Usuários Web / Mobile" vertex="1">
+          <mxGeometry height="60" width="240" x="780" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;fontStyle=1;" value="DNS Global / Traffic Manager" vertex="1">
+          <mxGeometry height="65" width="310" x="745" y="173" as="geometry" />
+        </mxCell>
+        <mxCell id="arc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;dashed=1;" value="Azure Arc&#xa;Governança híbrida / multi-cloud" vertex="1">
+          <mxGeometry height="70" width="490" x="655" y="273" as="geometry" />
+        </mxCell>
+        <mxCell id="obs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;fontSize=14;fontStyle=1;dashed=1;" value="Observabilidade unificada&#xa;Logs, métricas e traces" vertex="1">
+          <mxGeometry height="70" width="280" x="760" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="azureCloud" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=42;fillColor=#e1f5fe;strokeColor=#0288d1;fontSize=17;fontStyle=1;rounded=1;" value="Azure — Brazil South" vertex="1">
+          <mxGeometry height="650" width="720" x="80" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="awsCloud" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=42;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=17;fontStyle=1;rounded=1;" value="AWS — us-east-1" vertex="1">
+          <mxGeometry height="650" width="720" x="1000" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeEnv" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=42;fillColor=#f5f5f5;strokeColor=#666666;fontSize=17;fontStyle=1;rounded=1;" value="Ambiente híbrido / edge QC" vertex="1">
+          <mxGeometry height="220" width="900" x="450" y="1058" as="geometry" />
+        </mxCell>
+        <mxCell id="afd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=14;fontStyle=1;" value="Azure CDN" vertex="1">
+          <mxGeometry height="60" width="280" x="300" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="apim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=14;fontStyle=1;" value="Azure API Management" vertex="1">
+          <mxGeometry height="60" width="280" x="300" y="523" as="geometry" />
+        </mxCell>
+        <mxCell id="aks" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=14;fontStyle=1;" value="AKS&#xa;Compute backend / APIs core" vertex="1">
+          <mxGeometry height="75" width="280" x="300" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="azsql" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="Azure SQL&#xa;Banco relacional" vertex="1">
+          <mxGeometry height="75" width="180" x="110" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="cosmos" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="Cosmos DB&#xa;Banco NoSQL" vertex="1">
+          <mxGeometry height="75" width="180" x="310" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="azblob" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="Azure Blob Storage&#xa;Catálogo, imagens e docs" vertex="1">
+          <mxGeometry height="75" width="220" x="510" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="azopenai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;" value="Azure OpenAI&#xa;Serviços de IA cognitivos" vertex="1">
+          <mxGeometry height="75" width="210" x="180" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="azvector" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;" value="Azure AI Search&#xa;Vector DB / Vector Search" vertex="1">
+          <mxGeometry height="75" width="220" x="430" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="cloudfront" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#ef6c00;fontSize=14;fontStyle=1;" value="Amazon CloudFront" vertex="1">
+          <mxGeometry height="60" width="280" x="1220" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#ef6c00;fontSize=14;fontStyle=1;" value="Amazon API Gateway" vertex="1">
+          <mxGeometry height="60" width="280" x="1220" y="523" as="geometry" />
+        </mxCell>
+        <mxCell id="eks" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#ef6c00;fontSize=14;fontStyle=1;" value="Amazon EKS&#xa;Compute backend / AI workloads" vertex="1">
+          <mxGeometry height="75" width="280" x="1220" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="aurora" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="Amazon RDS&lt;br&gt;Banco relacional" vertex="1">
+          <mxGeometry height="75" width="180" x="1030" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="dynamo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="DynamoDB&#xa;Banco NoSQL" vertex="1">
+          <mxGeometry height="75" width="180" x="1230" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="Amazon S3&#xa;Storage / data lake / logs" vertex="1">
+          <mxGeometry height="75" width="220" x="1430" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="bedrock" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;" value="Amazon Bedrock&lt;br&gt;Serviços de IA cognitivos" vertex="1">
+          <mxGeometry height="75" width="220" x="1100" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="awsvector" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;" value="Amazon OpenSearch&lt;br&gt;Vector DB / Vector Engine" vertex="1">
+          <mxGeometry height="75" width="250" x="1360" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="events" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;" value="Mensageria / Filas / Eventos&#xa;Azure Service Bus / Event Hubs&#xa;AWS SQS / SNS / MSK" vertex="1">
+          <mxGeometry height="105" width="340" x="715" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="cds" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=14;fontStyle=1;" value="Centros de distribuição / Lojas / Sistemas legados" vertex="1">
+          <mxGeometry height="95" width="270" x="500" y="1118" as="geometry" />
+        </mxCell>
+        <mxCell id="outposts" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#ef6c00;fontSize=14;fontStyle=1;" value="AWS Outposts&#xa;Processamento local AWS" vertex="1">
+          <mxGeometry height="95" width="210" x="820" y="1118" as="geometry" />
+        </mxCell>
+        <mxCell id="localWorkloads" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="Workloads locais&#xa;Estoque, WMS, ERP, picking" vertex="1">
+          <mxGeometry height="95" width="220" x="1080" y="1118" as="geometry" />
+        </mxCell>
+        <mxCell id="e_users_dns" edge="1" parent="1" source="users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="dns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dns_afd" edge="1" parent="1" source="dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="afd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dns_cf" edge="1" parent="1" source="dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="cloudfront">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_afd_apim" edge="1" parent="1" source="afd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="apim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_apim_aks" edge="1" parent="1" source="apim" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="aks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_aks_sql" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="azsql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_aks_cosmos" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="cosmos">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="715" />
+              <mxPoint x="400" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_aks_blob" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="azblob">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="715" />
+              <mxPoint x="620" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_aks_openai" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="azopenai">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="858" />
+              <mxPoint x="285" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_aks_vector" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="azvector">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="858" />
+              <mxPoint x="540" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cf_apigw" edge="1" parent="1" source="cloudfront" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="apigw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_apigw_eks" edge="1" parent="1" source="apigw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="eks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_eks_aurora" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="aurora">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="668" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eks_dynamo" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="dynamo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="715" />
+              <mxPoint x="1320" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eks_s3" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="s3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="715" />
+              <mxPoint x="1540" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eks_bedrock" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="bedrock">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="848" />
+              <mxPoint x="1210" y="848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eks_vector" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="awsvector">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="848" />
+              <mxPoint x="1485" y="848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_aks_events" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="events">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="885" y="646" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_events_eks" edge="1" parent="1" source="events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1;" target="eks">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="646" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cds_outposts" edge="1" parent="1" source="cds" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="outposts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_outposts_local" edge="1" parent="1" source="outposts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" target="localWorkloads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_local_aws" edge="1" parent="1" source="localWorkloads" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1;" target="eks">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1670" y="1165" />
+              <mxPoint x="1670" y="658" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_arc_azure" edge="1" parent="1" source="arc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;dashed=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="aks">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="308" />
+              <mxPoint x="270" y="627" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_arc_aws" edge="1" parent="1" source="arc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;dashed=1;" target="eks">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="308" />
+              <mxPoint x="1540" y="646" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_arc_edge" edge="1" parent="1" source="arc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;dashed=1;" target="cds">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="288" />
+              <mxPoint x="40" y="1166" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_aks_obs" edge="1" parent="1" source="aks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="obs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="627" />
+              <mxPoint x="700" y="513" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eks_obs" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;dashed=1;" target="obs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="628" />
+              <mxPoint x="1120" y="508" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_edge_obs" edge="1" parent="1" source="localWorkloads" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;dashed=1;" target="obs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1770" y="1188" />
+              <mxPoint x="1770" y="358" />
+              <mxPoint x="950" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
