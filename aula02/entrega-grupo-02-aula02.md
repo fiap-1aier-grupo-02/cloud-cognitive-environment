@@ -730,7 +730,10 @@ Por fim, a aula reforçou a importância de segurança e governança. O uso de K
 
 ## Artefatos do ZIP
 
-* Documento principal: `entrega-grupo-aula02.md`
+* Documento principal: `entrega-grupo-02-aula02.md`
 * Diagrama da camada de dados: `diagramas/arquitetura-qc-aula02.jpg`
-* Terraform: `terraform/`
-* Scripts Python usados nos exercícios avançados: `scripts/`
+* Terraform adicional criado para o N3:
+  * `terraform/synapse.tf`
+* Scripts Python usados nos exercícios avançados:
+  * `scripts/gerar_logs_compras.py`
+  * `scripts/benchmark_3_3.py`
