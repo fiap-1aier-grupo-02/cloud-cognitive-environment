@@ -1,0 +1,494 @@
+[
+  {
+    "id": "r-101",
+    "estrelas": 4,
+    "produto": "Notebook Pro X",
+    "produto_id": "5",
+    "texto": "O Notebook Pro X possui excelente desempenho, tela de ótima qualidade e bateria suficiente para um dia inteiro de trabalho. O produto chegou bem embalado e sem qualquer defeito aparente. Entretanto, a entrega demorou oito dias além do prazo informado e o atendimento não conseguiu explicar o atraso. Para retorno, meu e-mail é cliente.teste@example.com e meu telefone é (11) 99999-0000. Gostei muito da qualidade do notebook, mas a entrega e o suporte precisam melhorar.",
+    "aspectos": [
+      {
+        "texto": "tela",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "ótima qualidade",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "bateria",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 0.98,
+          "negative": 0.02,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "suficiente",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 0.98,
+              "negative": 0.02,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "produto",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 0.98,
+          "negative": 0.02,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "defeito",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 0.96,
+              "negative": 0.04,
+              "neutral": 0.0
+            }
+          },
+          {
+            "texto": "bem embalado",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 0.99,
+              "negative": 0.01,
+              "neutral": 0.0
+            }
+          }
+        ]
+      }
+    ],
+    "entidades": [
+      {
+        "texto": "Notebook Pro X",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.98
+      },
+      {
+        "texto": "tela",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.52
+      },
+      {
+        "texto": "bateria",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.72
+      },
+      {
+        "texto": "um dia inteiro",
+        "categoria": "DateTime",
+        "subcategoria": "Duration",
+        "confianca": 0.58
+      },
+      {
+        "texto": "produto",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.81
+      },
+      {
+        "texto": "entrega",
+        "categoria": "Skill",
+        "subcategoria": null,
+        "confianca": 0.66
+      },
+      {
+        "texto": "oito dias",
+        "categoria": "DateTime",
+        "subcategoria": "Duration",
+        "confianca": 0.95
+      },
+      {
+        "texto": "notebook",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.98
+      },
+      {
+        "texto": "entrega",
+        "categoria": "Skill",
+        "subcategoria": null,
+        "confianca": 0.98
+      },
+      {
+        "texto": "suporte",
+        "categoria": "Skill",
+        "subcategoria": null,
+        "confianca": 0.96
+      }
+    ],
+    "pii_categorias": [
+      "Email",
+      "PhoneNumber"
+    ],
+    "processado_em": "2026-07-19T21:54:04.052637Z",
+    "resumo": "Entretanto, a entrega demorou oito dias além do prazo informado e o atendimento não conseguiu explicar o atraso.",
+    "sentimento_label": "mixed",
+    "sentimento_score": {
+      "positive": 0.74,
+      "negative": 0.26,
+      "neutral": 0.0
+    },
+    "texto_redacted": "O Notebook Pro X possui excelente desempenho, tela de ótima qualidade e bateria suficiente para um dia inteiro de trabalho. O produto chegou bem embalado e sem qualquer defeito aparente. Entretanto, a entrega demorou oito dias além do prazo informado e o atendimento não conseguiu explicar o atraso. Para retorno, meu e-mail é ************************* e meu telefone é ***************. Gostei muito da qualidade do notebook, mas a entrega e o suporte precisam melhorar."
+  },
+  {
+    "id": "r-102",
+    "estrelas": 1,
+    "produto": "Fone Bluetooth QC-50",
+    "produto_id": "12",
+    "texto": "A qualidade do som é péssima e o fone apresenta ruído desde o primeiro uso. Solicitei a troca usando o CPF 000.000.000-00, mas o atendimento ainda não resolveu o problema.",
+    "aspectos": [
+      {
+        "texto": "qualidade",
+        "sentimento": "negative",
+        "confianca": {
+          "positive": 0.0,
+          "negative": 1.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "péssima",
+            "sentimento": "negative",
+            "confianca": {
+              "positive": 0.0,
+              "negative": 1.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "som",
+        "sentimento": "negative",
+        "confianca": {
+          "positive": 0.0,
+          "negative": 1.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "péssima",
+            "sentimento": "negative",
+            "confianca": {
+              "positive": 0.0,
+              "negative": 1.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "fone",
+        "sentimento": "negative",
+        "confianca": {
+          "positive": 0.01,
+          "negative": 0.99,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "ruído",
+            "sentimento": "negative",
+            "confianca": {
+              "positive": 0.01,
+              "negative": 0.99,
+              "neutral": 0.0
+            }
+          }
+        ]
+      }
+    ],
+    "entidades": [
+      {
+        "texto": "fone",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.9
+      },
+      {
+        "texto": "primeiro",
+        "categoria": "Quantity",
+        "subcategoria": "Ordinal",
+        "confianca": 0.97
+      }
+    ],
+    "pii_categorias": [
+      "BRCPFNumber"
+    ],
+    "processado_em": "2026-07-19T21:54:04.055811Z",
+    "resumo": null,
+    "sentimento_label": "negative",
+    "sentimento_score": {
+      "positive": 0.0,
+      "negative": 1.0,
+      "neutral": 0.0
+    },
+    "texto_redacted": "A qualidade do som é péssima e o fone apresenta ruído desde o primeiro uso. Solicitei a troca usando o CPF **************, mas o atendimento ainda não resolveu o problema."
+  },
+  {
+    "id": "r-103",
+    "estrelas": 5,
+    "produto": "Cadeira Ergonômica QC",
+    "produto_id": "18",
+    "texto": "A cadeira é muito confortável, o apoio lombar funciona bem e a montagem foi simples. Usei o produto durante várias horas seguidas e não senti o desconforto que tinha com a cadeira anterior. O material parece resistente, os ajustes são fáceis de utilizar e as rodas deslizam sem fazer barulho. A entrega também chegou antes do prazo e a embalagem protegeu todas as peças. Foi uma excelente compra para o meu escritório.",
+    "aspectos": [
+      {
+        "texto": "cadeira",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "confortável",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "montagem",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "simples",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "apoio lombar",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "funciona bem",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "produto",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 0.95,
+          "negative": 0.05,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "desconforto",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 0.95,
+              "negative": 0.05,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "material",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "resistente",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "ajustes",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "fáceis",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          },
+          {
+            "texto": "fáceis de utilizar",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 0.99,
+              "negative": 0.01,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "embalagem",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "protegeu",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "texto": "compra",
+        "sentimento": "positive",
+        "confianca": {
+          "positive": 1.0,
+          "negative": 0.0,
+          "neutral": 0.0
+        },
+        "avaliacoes": [
+          {
+            "texto": "excelente",
+            "sentimento": "positive",
+            "confianca": {
+              "positive": 1.0,
+              "negative": 0.0,
+              "neutral": 0.0
+            }
+          }
+        ]
+      }
+    ],
+    "entidades": [
+      {
+        "texto": "cadeira",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.93
+      },
+      {
+        "texto": "montagem",
+        "categoria": "Skill",
+        "subcategoria": null,
+        "confianca": 0.99
+      },
+      {
+        "texto": "várias horas",
+        "categoria": "DateTime",
+        "subcategoria": "Duration",
+        "confianca": 0.65
+      },
+      {
+        "texto": "cadeira",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.8
+      },
+      {
+        "texto": "rodas",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.9
+      },
+      {
+        "texto": "entrega",
+        "categoria": "Skill",
+        "subcategoria": null,
+        "confianca": 0.79
+      },
+      {
+        "texto": "embalagem",
+        "categoria": "Product",
+        "subcategoria": null,
+        "confianca": 0.58
+      },
+      {
+        "texto": "uma",
+        "categoria": "Quantity",
+        "subcategoria": "Number",
+        "confianca": 0.8
+      },
+      {
+        "texto": "escritório",
+        "categoria": "Location",
+        "subcategoria": null,
+        "confianca": 0.98
+      }
+    ],
+    "pii_categorias": [],
+    "processado_em": "2026-07-19T21:54:04.057814Z",
+    "resumo": "A cadeira é muito confortável, o apoio lombar funciona bem e a montagem foi simples.",
+    "sentimento_label": "mixed",
+    "sentimento_score": {
+      "positive": 0.87,
+      "negative": 0.12,
+      "neutral": 0.01
+    },
+    "texto_redacted": "A cadeira é muito confortável, o apoio lombar funciona bem e a montagem foi simples. Usei o produto durante várias horas seguidas e não senti o desconforto que tinha com a cadeira anterior. O material parece resistente, os ajustes são fáceis de utilizar e as rodas deslizam sem fazer barulho. A entrega também chegou antes do prazo e a embalagem protegeu todas as peças. Foi uma excelente compra para o meu escritório."
+  }
+]
