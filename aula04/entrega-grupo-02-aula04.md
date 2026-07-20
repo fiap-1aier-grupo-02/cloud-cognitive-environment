@@ -18,10 +18,9 @@
 ## Distribuição do trabalho
 | Membro | Nível assumido | Item específico |
 |--------|----------------|-----------------|
-| Rafael Peinado | 🟢 N1 | Exercícios 1.1, 1.2, 1.3, 1.4 |
-| Filipe Borges | 🟡 N2 | Exercício 2.1 |
-| Lucas de Assis | 🟡 N2 | Exercício 2.2, 2.3 |
-| Rafael Peinado | 🔴 N3 (bônus) | Exercício 3.1, 3.2, 3.3 |
+| Lucas de Assis | 🟢 N1 | Exercícios 1.2, 1.3, 1.4 |
+| Rafael Peinado | 🟡 N2 | Exercício 1.1, 2.1, 2.2, 2.3 |
+| Filipe Borges | 🔴 N3 (bônus) | Exercício 3.1, 3.2 |
 
 > Regra: cada membro deve ter pelo menos uma contribuição. O **rodízio entre aulas** (quem fez N1 antes faz N2 depois) é incentivado e vale o ponto do Critério 4 (ver [rubrica.md](rubrica.md)).
 
@@ -453,6 +452,84 @@ Embora o Vision pronto com LLM seja mais barato na estimativa inicial, o custo n
 
 ---
 
+### Exercício 3.1 — Fechar o loop: Vector Search verdadeiro com Azure OpenAI
+
+a) arquivo enviado separado
+
+b)A busca vetorial é mais relevante para a Quantum Commerce porque ela entende melhor o significado da busca do usuário, e não apenas as palavras digitadas.
+
+No caso da pesquisa "cadeira para minha coluna ergonômica", ela conseguiu encontrar produtos relacionados a conforto, postura e apoio lombar, mesmo quando essas palavras não aparecem exatamente na descrição do produto.
+
+Isso é importante para a QC porque os clientes normalmente fazem buscas usando linguagem natural, e a busca vetorial aumenta a chance de encontrar produtos que realmente atendam à necessidade do usuário.
+
+c)Após essa primeira geração, a empresa não precisaria recalcular todo o catálogo. O ideal seria utilizar um processo incremental, gerando embeddings apenas para produtos novos ou quando houver alteração nas informações do produto.
+
+d)Para manter os embeddings atualizados, a QC poderia gerar novos embeddings apenas quando um produto novo entrar no catálogo ou quando alguma informação importante do produto mudar.
+
+Assim, não seria necessário processar novamente todos os produtos existentes. Um processo automático poderia identificar os novos produtos, gerar os embeddings e atualizar o índice do Azure AI Search.
+
+Como são cerca de 10 mil novos produtos por mês, esse processo incremental teria um custo menor e manteria a busca sempre atualizada.
+
+### Exercício 3.2 — Fechar o loop: Vector Search verdadeiro com Azure OpenAI
+
+#### 1. Métricas do modelo
+
+Projeto: QC Premium
+
+Tipo:
+- Classificação de imagens
+- Multiclasse
+
+Iteração:
+- Iteração 1
+
+Métricas:
+
+- Precisão (Precision): 100%
+- Recall: 100%
+- AP (Average Precision): 100%
+
+Desempenho por classe:
+
+| Classe | Precisão | Recall | AP | Imagens |
+|---|---|---|---|---|
+| sofás | 100% | 100% | 100% | 15 |
+| poltronas | 100% | 100% | 100% | 15 |
+| Mesas | 100% | 100% | 100% | 15 |
+
+(Adicionar print do painel de métricas aqui)
+
+
+#### 2. API de previsão
+
+Modelo publicado:
+
+qc-premium-model
+
+URL da API:
+
+https://customvisionqctraining-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/0417dcf5-2200-4a9c-8fae-e853fc33ede6/classify/iterations/qc-premium-model/image
+
+
+Foi realizado teste enviando uma imagem para a API REST e o modelo retornou a categoria prevista.
+
+
+#### 3. Estimativa de custo
+
+Considerando 50 mil predições por mês:
+
+50.000 predições / 1.000 = 50 unidades
+
+Considerando aproximadamente US$ 1,50 por mil transações:
+
+50 × US$ 1,50 = US$ 75/mês
+
+Custo estimado:
+US$ 75 por mês aproximadamente.
+
+---
+
+
 ## Reflexão coletiva
 O grupo concluiu que APIs prontas, modelos customizados e LLMs atendem a necessidades diferentes. Serviços prontos são mais adequados para tarefas genéricas e bem definidas, modelos customizados para domínios específicos da Quantum Commerce, e LLMs para atividades abertas, interpretativas ou generativas.
 
@@ -469,3 +546,7 @@ O pipeline de reviews também evidenciou a importância da segurança e da ordem
 * 3 Reviews em JSON: `jsons/reviews-processadas.json`
 * Scripts Python usados nos exercícios avançados:
   * `scripts/function_app.py`
+  * `scripts/indexar_produtos_vector.py`
+* Imagens: 
+  * `imagens/desempenho_por_etiqueta.png`
+  * `imagens/produtos_indexados.png`
